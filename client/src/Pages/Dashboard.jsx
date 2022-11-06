@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
 import Application from '../Components/Application'
-
+import Button from '../Components/Button'
 const Dashboard = () => {
     const Navigate = useNavigate();
     if (!window.localStorage.getItem("token")) {
@@ -25,6 +25,7 @@ const Dashboard = () => {
             ))}
           
         </div>
+        <div className='absolute top-3 right-10'><Link to='/admin/login'><Button text={'Logout'}/></Link></div>
     </div>
   )
 }

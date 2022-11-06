@@ -87,10 +87,10 @@ app.get('/user/applications', (req, res, next) => {
     })
 })
 
-app.get('/download/fileName',(req, res) => {
-  const fileName = req.params.fileName
+app.get('/download',(req, res) => {
+  const fileName = req.headers.filename
   console.log(fileName);
-  res.download(path.resolve(__dirname,`./uploads/${fileName}`))
+  res.download(path.join(__dirname,`./uploads/${fileName}`))
 })
 
 

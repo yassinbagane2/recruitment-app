@@ -4,9 +4,13 @@ import fileDownload from 'js-file-download'
 import { IoClose } from 'react-icons/io5'
 const Application = ({fullname, email, city, streetAddress, phoneNumber, about, CV}) => {
     const [showInfo, setShowInfo] = useState(false);
-    const DownloadCV = () => {
-        axios.get(`http://localhost:8080/download/:${CV}`, {
+    const DownloadCV = (e) => {
+        e.preventDefault();
+        axios.get(`http://localhost:8080/download`, {
             responseType: 'blob',
+            headers: {
+                fileName : CV
+            }
         }).then(res => {
             fileDownload(res.data,'downloaded.pdf');
         })
