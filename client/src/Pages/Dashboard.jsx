@@ -18,7 +18,7 @@ const Dashboard = () => {
             .catch(err => {console.log(err)})
     },[]);
   return (
-    <div className='min-h-screen bg-cyan-50 w-full flex items-center justify-center'>
+    <div className='min-h-screen bg-violet-200 w-full flex items-center justify-center'>
         <div className='w-[720px] min-h-[800px] bg-white shadow-md rounded-md flex flex-col items-center'>
             {applications.map((application, i) => (
                 <Application key={i} CV={application.CV} fullname={application.fullname} email={application.email} city={application.city} streetAddress={application.streetAddress} phoneNumber={application.phoneNumber} about={application.about}/>

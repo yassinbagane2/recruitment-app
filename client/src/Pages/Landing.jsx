@@ -50,9 +50,9 @@ const Landing = () => {
   return (
     <>
       {!formSubmited ? 
-      <div className='h-screen w-full bg-cyan-50 flex items-center justify-center'>
-        <div className='h-[800px] w-[620px] bg-white rounded-md flex justify-center'>
-          <form className='w-[320px] flex flex-col mt-10'  onSubmit={formSubmitHandler} method='POST'>
+      <div className='h-screen w-full overflow-hidden bg-violet-100 flex items-center justify-center'>
+        <div className='h-[720px] w-[620px] my-3 bg-white rounded-md flex justify-center'>
+          <form className='w-[320px] flex py-2 flex-col mt-10'  onSubmit={formSubmitHandler} method='POST'>
             <Input label='Fullname' onChange={inputChangeHandler} type='text' name='fullname' placeholder='Jhon Doe'/>
             <Input label='Email' onChange={inputChangeHandler} type='email' name='email' placeholder='you@example.com'/>
             <Input label='City' onChange={inputChangeHandler} type='text' name='city' placeholder='ex - Monastir'/>
@@ -67,8 +67,8 @@ const Landing = () => {
           </form>
         </div>
       </div> : 
-      <div className='h-screen w-full bg-cyan-50 flex items-center justify-center'>
-        <div className='h-[230px] w-[400px] bg-white rounded-md flex items-center justify-center flex-col'>
+      <div className='h-screen w-full bg-violet-100 flex items-center justify-center'>
+        <div className='h-[230px] w-[400px] my-3 py-3 bg-white rounded-md flex items-center justify-center flex-col'>
           <h1 className='flex justify-center items-center text-lg font-bold'>Thanks!</h1>
           <div className='w-20 my-4'>
             <Button text='Return' handleClick = {handleClick}/>

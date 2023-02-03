@@ -17,7 +17,7 @@ const Application = ({fullname, email, city, streetAddress, phoneNumber, about, 
     }
   return (
     <>
-        <div className='flex items-center justify-around my-4 w-[80%] h-20 bg-cyan-100 rounded-md'>
+        <div className='flex items-center justify-around my-4 w-[80%] h-20 bg-violet-100 rounded-md'>
             <div className='text-lg font-bold'>{fullname}</div>
             <div>
                 <button onClick={() => {setShowInfo(!showInfo)}} className='inline-flex text-lime-600 hover:scale-105 items-center bg-cyan-50 px-4 py-2 border border-transparent text-sm font-medium rounded-md'>View</button>

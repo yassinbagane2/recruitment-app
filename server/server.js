@@ -5,7 +5,8 @@ const Admin = require('./Models/AdminModel')
 const Application = require('./Models/Application.model')
 const jwt = require('jsonwebtoken')
 const upload = require('express-fileupload')
-const { application } = require('express')
+require('dotenv').config()
+
 const app = express()
 
 const fs = require('fs')
@@ -107,7 +108,7 @@ app.use((error, req, res, next) => {
 
 
 mongoose
-  .connect(`mongodb+srv://yassinbagane2:52544318@cluster0.qollkp9.mongodb.net/recruiting`)
+  .connect(`mongodb+srv://yassinbagane2:${process.env.PWD}@cluster0.qollkp9.mongodb.net/recruiting`)
   .then(() => {
     app.listen(8080);
     console.log("connected");
